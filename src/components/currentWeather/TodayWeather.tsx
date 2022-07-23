@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react'
 import { Context } from '../context/Context';
 import { TodayWeatherCard } from '../currentWeatherCard/TodayWeatherCard';
+import { Search } from '../search/Search';
 import { Spinner } from '../spinner/Spinner';
 import { ICurrentWeather } from './ICurrentWeather';
 
@@ -11,14 +12,14 @@ export const TodayWeather = () => {
     const {city} = useContext(Context);
     const[todayWeather, setTodayWeather] = useState<ICurrentWeather>();
 
+    
     useEffect(() => {
         const getTodayWeather = () => {
-            axios.get(`${API_URL}q=${city}&appid=${API_KEY}&units=metric`).then(res => {
-                setTodayWeather(res.data);
-                console.log(res.data);
-            }).catch(error => {
-                console.log(error);
-            });
+            axios.get(`${API_URL}q=${city}&appid=${API_KEY}&units=metric`).then(res => {setTodayWeather(res.data);
+                    console.log(res.data);
+                }).catch(error => {
+                    console.log(error);
+                });
         }
         getTodayWeather();
     },[API_KEY, city]);

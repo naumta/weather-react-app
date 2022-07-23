@@ -31,7 +31,7 @@ export const NavBar = ({setOpenModal}:{setOpenModal:Dispatch<SetStateAction<bool
                     aria-current="page">5-days</Link>
                 </li>
             </ul>
-
+            
             <button className="btn btn-primary" onClick={() => logout()}>Logout</button>
         </>
         :
@@ -45,13 +45,13 @@ export const NavBar = ({setOpenModal}:{setOpenModal:Dispatch<SetStateAction<bool
                 </li>
                 
             </ul> 
-
+            
             <button className="btn btn-primary" onClick={() => setOpenModal(true)}>Login</button>
         </>
     }
         </div>
 
-        <Search setCity={setCity}/>
+        <Search />
     </nav>
     )
 }

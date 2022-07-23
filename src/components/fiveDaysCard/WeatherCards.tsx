@@ -4,10 +4,9 @@ import { Context } from '../context/Context'
 import { IFiveDaysWeather } from '../fiveDaysWeather/IFiveDaysWeather'
 
 export const WeatherCards = ({fiveDaysWeather}:{fiveDaysWeather:IFiveDaysWeather["list"]}) => {
-    const {city} = useContext(Context);
+    
     return (
-        <>
-        <h1>Weather in {city}</h1>
+
     <div className="row g-4 m-3">
         {fiveDaysWeather.length 
         ?
@@ -31,6 +30,5 @@ export const WeatherCards = ({fiveDaysWeather}:{fiveDaysWeather:IFiveDaysWeather
             <div>Not found</div>
         }
     </div>
-    </>
     )
 }

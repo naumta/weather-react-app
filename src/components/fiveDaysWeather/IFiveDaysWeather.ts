@@ -1,4 +1,5 @@
 export interface IFiveDaysWeather {
+    dt_txt: any
     main: any
     cod: string,
     message: number,

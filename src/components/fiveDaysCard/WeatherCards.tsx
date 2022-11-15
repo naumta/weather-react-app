@@ -1,6 +1,4 @@
 import moment from 'moment'
-import React, { useContext } from 'react'
-import { Context } from '../context/Context'
 import { IFiveDaysWeather } from '../fiveDaysWeather/IFiveDaysWeather'
 
 export const WeatherCards = ({fiveDaysWeather}:{fiveDaysWeather:IFiveDaysWeather["list"]}) => {
@@ -8,8 +6,7 @@ export const WeatherCards = ({fiveDaysWeather}:{fiveDaysWeather:IFiveDaysWeather
     return (
 
     <div className="row g-4 m-3">
-        {fiveDaysWeather.length 
-        ?
+        {
         fiveDaysWeather.map((item, index) =>
             <div className="col" key={index}>
                 <div className="card h-100 shadow p-2 mb-1 bg-light rounded">
@@ -26,8 +23,6 @@ export const WeatherCards = ({fiveDaysWeather}:{fiveDaysWeather:IFiveDaysWeather
                     </div>
                 </div>
             </div>)
-            :
-            <div>Not found</div>
         }
     </div>
     )

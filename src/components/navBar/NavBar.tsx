@@ -4,7 +4,7 @@ import { Context } from '../context/Context'
 import { Search } from '../search/Search';
 
 export const NavBar = ({setOpenModal}:{setOpenModal:Dispatch<SetStateAction<boolean>>}) => {
-    const {setCity, isAuth, setIsAuth} = useContext(Context);
+    const {isAuth, setIsAuth} = useContext(Context);
     
     const logout = () => {
         localStorage.clear();

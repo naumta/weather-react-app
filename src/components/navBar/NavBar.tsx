@@ -12,7 +12,7 @@ export const NavBar = ({setOpenModal}:{setOpenModal:Dispatch<SetStateAction<bool
     }
 
     const isPress = () => {
-        window.confirm("You should registration?");
+        window.confirm("You should registration!");
     }
 
     return (

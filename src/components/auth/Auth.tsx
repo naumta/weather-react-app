@@ -7,16 +7,14 @@ export const Auth = () => {
 
     const [username] = useState('mor_2314');
     const [password] = useState('83r5^_');
-    const JSON_URL = `https://fakestoreapi.com/auth/login`
+    const JSON_URL = `https://fakestoreapi.com/auth/login`;
 
     const login = (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         axios.post(JSON_URL, {username, password}).then(res => {
-            localStorage.setItem('token', res.data.token)    
+            localStorage.setItem('token', res.data.token);
             setIsAuth(true);
             setOpenModal(false);
-            
-            //console.log(res);
         });
     };
 

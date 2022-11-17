@@ -14,6 +14,6 @@ interface IModal {
     setOpenModal: Dispatch<SetStateAction<boolean>>
 }
 
-type AddContext = ICity & IAuth & IModal
+type AddContext = ICity & IAuth & IModal;
 
 export const Context = createContext({} as AddContext );

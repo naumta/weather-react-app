@@ -30,14 +30,14 @@ export const FiveDays = () => {
 
     return (
         <div>
-            <WeatherCards fiveDaysWeather={fiveDaysWeather}/> 
+            <WeatherCards fiveDaysWeather={fiveDaysWeather} /> 
 
             {loading && 
                 (<div className="spinner-border text-primary" role="status"><span className="visually-hidden">Loading...</span>
                 </div>)}
-
-            {error && <div className='p-4 fs-2 text-danger' 
-                style={{fontWeight:"bold"}}>{error}</div>}
+            
+            {error && (<div className='p-4 fs-2 text-danger' 
+                style={{fontWeight:"bold"}}>{error}</div>)}
         </div>
     )
 }
